@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-d3b3fwfh> <head><title>Newsletter Preview | Agentic Pulse</title><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="https://ngandhi-dev.github.io/agentic_ai_hub/_astro/about.CgUmUwZI.css">
+<style>.admin-bar[data-astro-cid-d3b3fwfh]{position:fixed;bottom:0;left:0;right:0;background:#0f172a;padding:15px;display:flex;justify-content:center;gap:20px;align-items:center;border-top:1px solid #1e293b}.btn-primary[data-astro-cid-d3b3fwfh]{background:#2563eb;color:#fff;border:none;padding:10px 20px;border-radius:6px;font-weight:600;cursor:pointer}.btn-primary[data-astro-cid-d3b3fwfh]:disabled{opacity:.5}#status-msg[data-astro-cid-d3b3fwfh]{color:#94a3b8;font-size:14px;font-family:sans-serif}body{margin:0;padding:0;background-color:#e2e8f0}.preview-notice[data-astro-cid-d3b3fwfh]{background:#0f172a;color:#fff;padding:10px;text-align:center;font-family:sans-serif;font-size:13px}
+</style></head> <body data-astro-cid-d3b3fwfh> <div class="preview-notice" data-astro-cid-d3b3fwfh>
+🛠️ <strong data-astro-cid-d3b3fwfh>Internal Preview:</strong> This is how the newsletter will appear in subscriber inboxes.
+</div> <div style="background-color: #f8fafc; padding: 40px 10px; font-family: sans-serif;" data-astro-cid-d3b3fwfh> <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: {colors.cardBg}; border-radius: 24px; border: 1px solid #e2e8f0; margin: 0 auto;" data-astro-cid-d3b3fwfh> <tr data-astro-cid-d3b3fwfh> <td style="padding: 40px; border-bottom: 1px solid #f1f5f9;" data-astro-cid-d3b3fwfh> <span style="background: #2563eb; color: #ffffff; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 800; text-transform: uppercase;" data-astro-cid-d3b3fwfh>
+Weekly Intelligence
+</span> <h1 style="font-size: 24px; font-weight: 800; color: #0f172a; margin: 16px 0 8px 0;" data-astro-cid-d3b3fwfh> The Pulse: Week of January 3 </h1> </td> </tr> <tr data-astro-cid-d3b3fwfh> <td style="padding: 40px;" data-astro-cid-d3b3fwfh>  </td> </tr> <div class="admin-bar" data-astro-cid-d3b3fwfh> <button id="send-test-btn" class="btn-primary" data-astro-cid-d3b3fwfh>Send Test to Inbox</button> <span id="status-msg" data-astro-cid-d3b3fwfh></span> </div>  <script>(function(){const subject = "Agentic Pulse | Week of 1/3/2026";
+
+    const btn = document.getElementById('send-test-btn');
+    const status = document.getElementById('status-msg');
+    // 1. Get the email input element (Add this ID to an input in your HTML)
+    const emailInput = document.getElementById('subscriber-email');
+    
+    btn.addEventListener('click', async () => {
+        const recipient = emailInput?.value;
+
+        if (!recipient) {
+            status.innerText = 'Please enter an email address.';
+            status.style.color = '#ef4444';
+            return;
+        }
+        btn.disabled = true;
+        status.innerText = 'Sending...';
+        
+        // Grabs the HTML from the specific email container we created
+        const emailHtml = document.querySelector('[style*="background-color: #f8fafc"]').outerHTML;
+
+        try {
+            const res = await fetch('/api/send-test', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                // 2. Pass the recipient email in the body
+                body: JSON.stringify({ html: emailHtml, subject: subject, to: recipient })
+            });
+
+            const result = await res.json();
+
+            if (res.ok) {
+                status.innerText = 'Sent successfully!';
+                status.style.color = '#10b981'; // Green
+            } else {
+                status.innerText = `Error: ${result.error || 'Failed to send'}`;
+                status.style.color = '#ef4444'; // Red
+            }
+        } catch (err) {
+            status.innerText = 'Network error occurred.';
+            console.error(err);
+        } finally {
+            btn.disabled = false;
+        }
+    });
+})();</script></table></div></body></html>
