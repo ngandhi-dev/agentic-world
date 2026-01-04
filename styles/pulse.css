@@ -1230,31 +1230,65 @@ html {
     color: white;
 }
 
+/* Container for the whole share section */
+.modal-share-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.share-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
 .share-buttons-container {
     display: flex;
     gap: 12px;
-    margin-top: 1.5rem;
-    flex-wrap: wrap; /* Prevents overflow on mobile */
+    justify-content: center;
+    width: 100%;
 }
 
 .share-btn {
     display: inline-flex;
     align-items: center;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 0.85rem;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 100px; /* Pill shape */
+    font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.2s;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid #e2e8f0;
     background: white;
     color: #0f172a;
+    cursor: pointer;
 }
 
 .share-btn:hover {
+    border-color: #cbd5e1;
     background: #f8fafc;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.share-btn.twitter { background: #000000; color: white; border: none; }
-.share-btn.linkedin { background: #0077b5; color: white; border: none; }
+/* Specific button styles for better visibility */
+.twitter-btn:hover { color: #1DA1F2; border-color: #1DA1F2; }
+.linkedin-btn:hover { color: #0077b5; border-color: #0077b5; }
+.copy-btn:hover { color: #6366f1; border-color: #6366f1; }
+
+@media (max-width: 640px) {
+    .share-buttons-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .share-btn { width: 100%; justify-content: center; }
+}
