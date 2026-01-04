@@ -1,4 +1,4 @@
-import { supabase } from "../lib/supabase";
+//import { supabase } from "../lib/supabase";
 
 const initPulse = () => {
   // Your JavaScript code here
@@ -22,7 +22,8 @@ const initPulse = () => {
   const resultsBadge = document.getElementById("search-results-count");
 
   // A helper to check if the database is ready and the page is active
-  const isRunnable = () => typeof window !== "undefined" && supabase;
+  const isRunnable = () =>
+    typeof window !== "undefined" && window.supabaseClient; //supabase;
 
   // 2. BOOKMARK HELPERS
   const getBookmarks = () =>
@@ -279,7 +280,7 @@ const initPulse = () => {
 
     // 2. Database Trip (only if cache is old/missing)
     try {
-      const { data, error } = await supabase
+      const { data, error } = await window.supabaseClient //supabase
         .from("site_visits")
         .select("page_path, visit_count");
       if (!error && data) {
