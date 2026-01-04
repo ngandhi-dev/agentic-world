@@ -174,6 +174,7 @@ const initPulse = () => {
       const tag = trigger.getAttribute("data-tag");
       const date = trigger.getAttribute("data-date"); // Ensure you have this attr
       currentSharedSlug = trigger.getAttribute("data-slug");
+      const slug = trigger.getAttribute("data-slug");
 
       // 2. Select the title element in the modal
       const mTitle = document.getElementById("modal-title");
@@ -241,6 +242,9 @@ const initPulse = () => {
           modalContent.innerHTML = "<p>Error loading content.</p>";
         }
       }
+
+      // Update the share buttons for THIS specific card
+      updateModalShareButtons(slug, title);
     });
   });
 
@@ -649,6 +653,32 @@ const initPulse = () => {
     searchInput.value = "";
     updateAllFilters();
   });
+
+  const updateModalShareButtons = (slug, title) => {
+    const shareContainer = document.getElementById("modal-social-share");
+    if (!shareContainer) return;
+
+    // Use the custom domain for the links
+    const shareUrl = `https://www.agentsicworld.com/pulse/${slug}`;
+    const encodedUrl = encodeURIComponent(shareUrl);
+    const encodedTitle = encodeURIComponent(
+      `Check out this AI Insight: ${title}`
+    );
+
+    shareContainer.innerHTML = `
+        <button class="share-btn copy" onclick="navigator.clipboard.writeText('${shareUrl}'); alert('Link copied!');">
+            <span>Copy Link</span>
+        </button>
+        <a href="https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}" 
+           target="_blank" class="share-btn twitter">
+            <span>Twitter / X</span>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}" 
+           target="_blank" class="share-btn linkedin">
+            <span>LinkedIn</span>
+        </a>
+    `;
+  };
 };
 
 // Run on initial load

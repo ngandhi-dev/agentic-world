@@ -1229,3 +1229,32 @@ html {
     background: #2563eb;
     color: white;
 }
+
+.share-buttons-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 1.5rem;
+    flex-wrap: wrap; /* Prevents overflow on mobile */
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #0f172a;
+}
+
+.share-btn:hover {
+    background: #f8fafc;
+    transform: translateY(-1px);
+}
+
+.share-btn.twitter { background: #000000; color: white; border: none; }
+.share-btn.linkedin { background: #0077b5; color: white; border: none; }
