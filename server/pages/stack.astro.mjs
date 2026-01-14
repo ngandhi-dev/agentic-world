@@ -1,9 +1,9 @@
 /* empty css                                 */
-import { b as createAstro, c as createComponent, r as renderComponent, F as Fragment, a as renderTemplate, u as unescapeHTML, m as maybeRenderHead, e as renderScript, d as addAttribute } from '../chunks/astro/server_DSnOUyyP.mjs';
+import { b as createAstro, c as createComponent, r as renderComponent, F as Fragment, a as renderTemplate, u as unescapeHTML, m as maybeRenderHead, e as renderScript, d as addAttribute } from '../chunks/astro/server_DGMCOvMD.mjs';
 import 'piccolore';
-import { $ as $$Layout } from '../chunks/Layout_ABl5DFMf.mjs';
-import { $ as $$Navigation } from '../chunks/Navigation_CUJ5I0IX.mjs';
-import { $ as $$Footer } from '../chunks/footer_CC-uwvo8.mjs';
+import { $ as $$Layout } from '../chunks/Layout_ClCh8D5_.mjs';
+import { $ as $$Navigation } from '../chunks/Navigation_DO5BtSb-.mjs';
+import { $ as $$Footer } from '../chunks/footer_BObJIVNf.mjs';
 import { bundledLanguages } from 'shiki/langs';
 import { createShikiHighlighter } from '@astrojs/markdown-remark';
 import { s as supabase } from '../chunks/supabase_-lTqzB9X.mjs';

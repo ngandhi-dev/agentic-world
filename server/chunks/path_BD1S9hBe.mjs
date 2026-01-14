@@ -135,4 +135,4 @@ function hasFileExtension(path) {
   return WITH_FILE_EXT.test(path);
 }
 
-export { isParentDirectory as a, appendForwardSlash as b, removeTrailingForwardSlash as c, removeBase as d, isInternalPath as e, fileExtension as f, collapseDuplicateTrailingSlashes as g, hasFileExtension as h, isRemotePath as i, joinPaths as j, prependForwardSlash as p, removeQueryString as r, slash as s, trimSlashes as t };
+export { isParentDirectory as a, removeBase as b, appendForwardSlash as c, removeTrailingForwardSlash as d, isInternalPath as e, fileExtension as f, collapseDuplicateTrailingSlashes as g, hasFileExtension as h, isRemotePath as i, joinPaths as j, prependForwardSlash as p, removeQueryString as r, slash as s, trimSlashes as t };

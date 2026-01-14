@@ -2,9 +2,9 @@ import { escape } from 'html-escaper';
 import { Traverse } from 'neotraverse/modern';
 import pLimit from 'p-limit';
 import { z } from 'zod';
-import { d as removeBase, i as isRemotePath, p as prependForwardSlash } from './path_DP9bpVml.mjs';
-import { b as VALID_INPUT_FORMATS } from './consts_HRoi08cg.mjs';
-import { A as AstroError, am as UnknownContentCollectionError, c as createComponent, an as RenderUndefinedEntryError, u as unescapeHTML, a as renderTemplate, ao as renderUniqueStylesheet, ap as renderScriptElement, aq as createHeadAndContent, r as renderComponent } from './astro/server_DSnOUyyP.mjs';
+import { b as removeBase, i as isRemotePath, p as prependForwardSlash } from './path_BD1S9hBe.mjs';
+import { V as VALID_INPUT_FORMATS } from './consts_BmVDRGlB.mjs';
+import { A as AstroError, U as UnknownContentCollectionError, c as createComponent, R as RenderUndefinedEntryError, u as unescapeHTML, a as renderTemplate, i as renderUniqueStylesheet, j as renderScriptElement, k as createHeadAndContent, r as renderComponent } from './astro/server_DGMCOvMD.mjs';
 import 'piccolore';
 import * as devalue from 'devalue';
 
@@ -224,7 +224,7 @@ const CONTENT_LAYER_IMAGE_REGEX = /__ASTRO_IMAGE_="([^"]+)"/g;
 async function updateImageReferencesInBody(html, fileName) {
   const { default: imageAssetMap } = await import('./content-assets_DleWbedO.mjs');
   const imageObjects = /* @__PURE__ */ new Map();
-  const { getImage } = await import('./_astro_assets_OSDFJLOK.mjs').then(n => n._);
+  const { getImage } = await import('./_astro_assets_poMW2BSO.mjs').then(n => n._);
   for (const [_full, imagePath] of html.matchAll(CONTENT_LAYER_IMAGE_REGEX)) {
     try {
       const decodedImagePath = JSON.parse(imagePath.replaceAll("&#x22;", '"'));

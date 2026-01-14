@@ -1,4 +1,4 @@
-import { b as createAstro, c as createComponent, m as maybeRenderHead, r as renderComponent, d as addAttribute, a as renderTemplate } from './astro/server_DSnOUyyP.mjs';
+import { b as createAstro, c as createComponent, m as maybeRenderHead, r as renderComponent, d as addAttribute, a as renderTemplate } from './astro/server_DGMCOvMD.mjs';
 import 'piccolore';
 import { jsx, jsxs } from 'react/jsx-runtime';
 import { useState, useEffect } from 'react';

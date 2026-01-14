@@ -1,13 +1,13 @@
 /* empty css                                 */
-import { b as createAstro, c as createComponent, m as maybeRenderHead, d as addAttribute, e as renderScript, a as renderTemplate, r as renderComponent, F as Fragment, u as unescapeHTML } from '../chunks/astro/server_DSnOUyyP.mjs';
+import { b as createAstro, c as createComponent, m as maybeRenderHead, d as addAttribute, e as renderScript, a as renderTemplate, r as renderComponent, F as Fragment, u as unescapeHTML } from '../chunks/astro/server_DGMCOvMD.mjs';
 import 'piccolore';
 import 'clsx';
 /* empty css                                 */
-import { $ as $$Navigation } from '../chunks/Navigation_CUJ5I0IX.mjs';
-import { $ as $$Footer } from '../chunks/footer_CC-uwvo8.mjs';
-import { $ as $$Layout } from '../chunks/Layout_ABl5DFMf.mjs';
+import { $ as $$Navigation } from '../chunks/Navigation_DO5BtSb-.mjs';
+import { $ as $$Footer } from '../chunks/footer_BObJIVNf.mjs';
+import { $ as $$Layout } from '../chunks/Layout_ClCh8D5_.mjs';
 import { s as supabase } from '../chunks/supabase_-lTqzB9X.mjs';
-import { g as getCollection } from '../chunks/_astro_content_B84GJh74.mjs';
+import { g as getCollection } from '../chunks/_astro_content_CdqR1wNG.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro = createAstro("https://www.agentsicworld.com");

@@ -1,6 +1,6 @@
 import { renderers } from './renderers.mjs';
-import { c as createExports, s as serverEntrypointModule } from './chunks/_@astrojs-ssr-adapter_emisWmQa.mjs';
-import { manifest } from './manifest_BE3IDp-Q.mjs';
+import { c as createExports, s as serverEntrypointModule } from './chunks/_@astrojs-ssr-adapter_C7M6tI6k.mjs';
+import { manifest } from './manifest_CrYIqzWC.mjs';
 
 const serverIslandMap = new Map();;
 
@@ -24,15 +24,14 @@ const _page16 = () => import('./pages/preview/newsletter.astro.mjs');
 const _page17 = () => import('./pages/privacy-terms.astro.mjs');
 const _page18 = () => import('./pages/pulse.astro.mjs');
 const _page19 = () => import('./pages/pulse/_---slug_.astro.mjs');
-const _page20 = () => import('./pages/pulse - 12232025-3.38p.m..astro.mjs');
-const _page21 = () => import('./pages/settings.astro.mjs');
-const _page22 = () => import('./pages/signup.astro.mjs');
-const _page23 = () => import('./pages/stack/tools/_slug_.astro.mjs');
-const _page24 = () => import('./pages/stack/_slug_.astro.mjs');
-const _page25 = () => import('./pages/stack.astro.mjs');
-const _page26 = () => import('./pages/transperancy.astro.mjs');
-const _page27 = () => import('./pages/update-password.astro.mjs');
-const _page28 = () => import('./pages/index.astro.mjs');
+const _page20 = () => import('./pages/settings.astro.mjs');
+const _page21 = () => import('./pages/signup.astro.mjs');
+const _page22 = () => import('./pages/stack/tools/_slug_.astro.mjs');
+const _page23 = () => import('./pages/stack/_slug_.astro.mjs');
+const _page24 = () => import('./pages/stack.astro.mjs');
+const _page25 = () => import('./pages/transperancy.astro.mjs');
+const _page26 = () => import('./pages/update-password.astro.mjs');
+const _page27 = () => import('./pages/index.astro.mjs');
 const pageMap = new Map([
     ["node_modules/astro/dist/assets/endpoint/node.js", _page0],
     ["src/pages/about.astro", _page1],
@@ -54,15 +53,14 @@ const pageMap = new Map([
     ["src/pages/privacy-terms.astro", _page17],
     ["src/pages/pulse.astro", _page18],
     ["src/pages/pulse/[...slug].astro", _page19],
-    ["src/pages/pulse - 12232025-3.38p.m..astro", _page20],
-    ["src/pages/settings.astro", _page21],
-    ["src/pages/signup.astro", _page22],
-    ["src/pages/stack/tools/[slug].astro", _page23],
-    ["src/pages/stack/[slug].astro", _page24],
-    ["src/pages/stack.astro", _page25],
-    ["src/pages/transperancy.astro", _page26],
-    ["src/pages/update-password.astro", _page27],
-    ["src/pages/index.astro", _page28]
+    ["src/pages/settings.astro", _page20],
+    ["src/pages/signup.astro", _page21],
+    ["src/pages/stack/tools/[slug].astro", _page22],
+    ["src/pages/stack/[slug].astro", _page23],
+    ["src/pages/stack.astro", _page24],
+    ["src/pages/transperancy.astro", _page25],
+    ["src/pages/update-password.astro", _page26],
+    ["src/pages/index.astro", _page27]
 ]);
 
 const _manifest = Object.assign(manifest, {
