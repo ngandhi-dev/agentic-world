@@ -1,0 +1,1 @@
+import{s}from"./supabase.BU7h_rOJ.js";const a=document.getElementById("reset-request-form");a?.addEventListener("submit",async t=>{t.preventDefault();const r=document.getElementById("reset-email").value,{error:e}=await s.auth.resetPasswordForEmail(r,{redirectTo:`${window.location.origin}/update-password`});alert(e?e.message:"Success! Check your email for the reset link.")});

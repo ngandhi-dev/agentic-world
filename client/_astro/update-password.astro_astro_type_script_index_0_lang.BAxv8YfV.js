@@ -1,0 +1,1 @@
+import{s as a}from"./supabase.BU7h_rOJ.js";const o=document.getElementById("update-form");o?.addEventListener("submit",async s=>{s.preventDefault();const t=document.getElementById("new-password").value,{error:e}=await a.auth.updateUser({password:t});e?alert(e.message):(alert("Password updated successfully!"),window.location.href="/login")});
