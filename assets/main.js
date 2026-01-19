@@ -1,19 +1,20 @@
 // *********************************** SUPABASE CLIENT INIT *********************************** //
+import { createClient } from "@supabase/supabase-js";
 let supabase;
 
 const initApp = async () => {
   const configEl = document.getElementById("supabase-config");
 
   // 1. WAIT FOR CDN: If Supabase isn't ready yet, try again in 50ms
-  if (!window.supabase || !configEl) {
-    setTimeout(initApp, 50);
+  if (!configEl) {
+    console.error("Supabase config element not found!");
     return;
   }
 
   // 2. INITIALIZE CLIENT (Only once)
   if (!window.supabaseClient) {
     const { url, key } = configEl.dataset;
-    window.supabaseClient = window.supabase.createClient(url, key);
+    window.supabaseClient = createClient(url, key);
   }
 
   try {
@@ -1092,15 +1093,14 @@ if (sendtestbtn) {
 
 // *********************************** TRIGGER GLOBAL LOGIC *********************************** //
 const startApp = async () => {
+  await initApp();
+
   // 1. Wait for the Supabase SDK to load from CDN
   if (!window.supabaseClient) {
-    setTimeout(startApp, 100);
-    return;
+    // 2. Global Logic
+    await loadUserData();
+    trackVisit(window.location.pathname);
   }
-
-  // 2. Global Logic
-  await loadUserData();
-  trackVisit(window.location.pathname);
 
   // 3. Page-Specific Logic
   initPulsePage(); // This will only "fire" if it finds Pulse elements
